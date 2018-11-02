@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+.row {
+  margin: auto;
+  width: 40%;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    width: 45%;
+}
+
+.card.left {
+  float: left;
+}
+
+.card.right {
+  float: right;
+}
+
+.card-form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-form input[type="text"] {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.card-form input[type=submit] {
+  display: inline-block;
+  width: 100px;
+  margin: auto;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 1400px wide, adjust the widths of the row and the cards */
+@media screen and (max-width: 1400px) {
+    .row {
+      width: 80%;
+    }
+
+    .card {
+      width: 40%;
+    }
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two cards stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+      width: 90%;
+    }
+
+    .card {
+      width: 100%;
+      float: none;
+    }
+}
